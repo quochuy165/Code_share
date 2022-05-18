@@ -2,7 +2,7 @@ import os
 #set dir
 os.chdir('folder_path') #Điền đường dẫn chưa folder file scrape.py
 ##import
-from multiprocessing import Pool
+from multiprocessing import Pool, cpu_count
 import scrape
 import requests
 import numpy as np
@@ -10,7 +10,7 @@ import pandas as pd
 
 
 #Set number of process
-n_process = 4 #Thay đổi số core
+n_process = cpu_count
 #set pool
 pool = Pool(n_process)
 #device list stock
