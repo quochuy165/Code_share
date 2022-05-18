@@ -10,7 +10,7 @@ import pandas as pd
 
 
 #Set number of process
-n_process = cpu_count
+n_process = cpu_count()
 #set pool
 pool = Pool(n_process)
 #device list stock
